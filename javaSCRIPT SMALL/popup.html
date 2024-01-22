@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=!, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div>
+    <input type="text" id="input1",placeholder= "enter table number" /></div> 
+    <div><input type="text" id="input2",placeholder="enter table ending point"/></div>
+    <button onclick="table();">submit</button>
+
+    <script>
+        function table(){
+           let tablenum = document.getElementById("input1").value;
+           console.log(tablenum);
+           let tableend = document.getElementById("input2").value;
+            console.log(tableend)
+            console.log("you selected table is"+"  "+tablenum+""+"ending point is upto"+tableend)
+            for(i=1;i<=tableend;i++){
+                var mul=i*tablenum;
+                
+                console.log(tablenum+"*"+i+"="+mul)
+                 }
+
+        }
+        
+        
+    </script>
+</body>
+</html>

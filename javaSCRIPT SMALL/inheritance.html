@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+      
+<p id="demo"></p>
+
+
+<script>
+
+class Person{
+  constructor(){
+    this.name="naveen",
+    this.age=25
+  }
+  getName(){
+    return this.name
+  }
+}
+class Student extends Person{
+  constructor(id,location){
+    super();
+    this.id=id;
+    this.location=location;
+  }
+  getStudentDetails(){
+    document.getElementById("demo").innerHTML=`my name is ${this.name} and my age is ${this.age}`
+  }
+}
+let getStudentD=new Student()
+getStudentD.getStudentDetails(2,"hyd")
+</script>
+</body>
+</html>

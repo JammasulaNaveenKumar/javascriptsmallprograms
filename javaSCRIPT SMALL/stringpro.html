@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="id" placeholder="enter string"/>
+    <button onclick="person()">submit</button>
+    <div id="div"></div>
+   <script>
+    function person(){
+        let str=document.getElementById("id").value;
+       let sub=str.substring(0,6)
+       if(sub=="RABBIT"){
+        let l=str.length+1;
+        let str2=str.substring(6,l)
+        document.getElementById("div").innerHTML=`${str2}`
+       }
+else{
+    document.getElementById("div").innerHTML=`RABBIT${str}`
+}
+    }
+   </script>
+    
+</body>
+</html>

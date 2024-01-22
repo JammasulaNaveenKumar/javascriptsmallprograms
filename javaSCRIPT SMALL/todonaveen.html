@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+        color: rgb(145, 151, 156);
+        height: 40px;
+        border :solid cornflowerblue ;
+        text-align: center;
+    }
+    .main1{
+        color: rgb(140, 149, 156);
+        height: 40px;
+        border: solid rgb(2, 13, 33);
+        text-align: center;
+    }
+    .button{
+        height: 40px;
+        width: 200px;
+    }
+    .root{
+        margin: 40px;
+    }
+    .tab{
+        border: solid black;
+        width: 500px;
+    }
+
+</style>
+<body bgcolor="aqua" >
+    NAME:<input  class="main" type="text" id="t1" name="result" />
+    EMAIL:<input class="main1" type="text" id="t2" name="result1"/>
+    <button class="button" onclick="add()">ADD</button>
+    
+   <div class="root"> <table id="showTable">
+        <tr>
+            <th class="tab">Name of person</th>
+            <th class="tab">Email Address</th>
+        </tr>
+    
+
+    </table>
+    </div>
+    <script>
+        function add(){
+           let a= document.getElementById("t1").value;
+            let b= document.getElementById("t2").value;
+            let tableRow=document.createElement("tr");
+            tableRow.innerHTML +=`<td style=border:solid ;width:2px>${a}</td style=border:solid;width:2px><td>${b}</td><td><button>edit</button></td>`;
+            document.getElementById("showTable").appendChild(tableRow);
+            
+
+        }
+
+    </script>
+
+</body>
+</html>

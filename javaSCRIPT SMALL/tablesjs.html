@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            <label>enter table number</label>
+            <input type="text" id="tableNum"/>
+        </div>
+        <div>
+            <label>enter table endnumber</label>
+            <input type="text" id="tableend"/>
+        </div>
+        <button onclick="table();">enter</button>
+        <div id="demo"></div>
+
+
+    </div>
+    <script>
+        function table(){
+           let tableNum= document.getElementById("tableNum").value;
+           let endNum=document.getElementById("tableend").value;
+           for(i=1;i<=endNum;i++){
+            document.getElementById("demo").innerHTML+=`${tableNum} * ${i} = ${i*tableNum} <br/>`;
+           
+
+
+           }
+           element= document.createElement("div");
+           element.innerHTML="table ended"
+           document.getElementById("demo").appendChild(element)
+        }
+    </script>
+    
+</body>
+</html>

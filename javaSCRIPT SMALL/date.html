@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let day=new Date().getDay();
+    //console.log(time);
+    if(day==1){
+        document.write("today is: monday")
+    }
+    if(day==2){
+        document.write("today is: tuesday")
+    }
+    if(day==3){
+        document.write("today is: wednesday")
+    }
+    if(day==4){
+        document.write("today is :thursday")
+    }
+    if(day==5){
+        document.write("today is: friday")
+    }
+    if(day==6){
+        document.write("today is: sat")
+    }
+    let hours=new Date().getHours();
+    let minutes=new Date().getMinutes();
+    let sec=new Date().getSeconds();
+    document.write("Current time is :"+hours+"PM"+":"+minutes+":"+sec)
+
+    </script>
+    
+</body>
+</html>

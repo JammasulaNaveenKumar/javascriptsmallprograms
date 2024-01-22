@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myPromises=new Promise(async(resolve,reject)=>{
+            let result=await fetch("https://jsonplaceholder.typicode.com/posts");
+            console.log(result);
+            if(result.status==200){
+             return resolve(result.json());  
+              }
+            if(result.status!=200){
+                reject("error")
+            }
+        });
+        myPromises.then(
+             function(value){
+                console.log(value);
+                return value
+            },
+            function(error){
+                console.log(error)
+            },
+        ).then((v1)=>{
+console.log(v1);
+        });
+        
+    </script>
+</body>
+</html>

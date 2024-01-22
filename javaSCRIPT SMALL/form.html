@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div><input type="text" id="firstName" placeholder="firstName"  name="name" />
+        <span style="color:red" id="e1"></span></div>
+        <div><input type="text" id="secondName"  placeholder="LastName"  name="jname" value=""/>
+            <span style="color:red" id="e2"></span></div></div>
+        <div><input type="text" id="email"  placeholder="email" name="name" value=""/>
+            <span style="color:red" id="e3"></span></div></div>
+          <div><input type="text" id="password"  placeholder="password"  name="name" value=""/>
+            <span style="color:red" id="e4"></span></div></div>
+            <div><input type="text" id="confirmpassword"  placeholder="password"  name="name" value=""/>
+                <span style="color:red" id="e5"></span></div></div>
+        <button onclick="person();">submit</button>
+    </div>
+    <script>
+        
+        function person(){
+             let first= document.getElementById("firstName").value;
+             let second=document.getElementById("secondName").value;
+             let email=document.getElementById("email").value;
+             let password=document.getElementById("password").value;
+             let confirmpassword=document.getElementById("confirmpassword").value
+             console.log(confirmpassword)
+             if(first==""){
+                document.getElementById("e1").innerText="please fill the firstName"
+             }else{
+                document.getElementById("e1").innerText=""
+             }
+             if(second==""){
+                document.getElementById("e2").innerText="please fill the secondName"
+             }
+             else{
+                document.getElementById("e2").innerText=""
+             }
+             
+
+             if(email==""){
+                document.getElementById("e3").innerText="please fill the email"
+             }
+             else{
+                document.getElementById("e3").innerText=""
+             }
+             if(password==""){
+                document.getElementById("e4").innerText="please fill the password"
+             }
+             else{
+                document.getElementById("e4").innerText=""
+             }
+             if(password != confirmpassword || password==""){
+                document.getElementById("e5").innerText="password is not matched"
+
+             }
+
+
+
+
+             
+        }
+
+    </script>
+    
+</body>
+</html>

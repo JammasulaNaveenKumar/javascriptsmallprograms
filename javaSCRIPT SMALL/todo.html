@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    body{
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(61, 80, 80);
+    }
+    .container{
+        width: 40%;
+        min-width: 350px;
+        background-color: aqua;
+        max-height: 100%;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px;
+        height: 60px;
+    }
+    #newtask{
+        position: relative;
+        padding: 20px 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #tasklist{
+        margin-bottom: 9px;
+        padding: 10px 10px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        border: solid 1px;
+        background-color: aliceblue;
+
+    }
+</style>
+<body>
+    <div class="container">
+        <div id="newtask">
+            <input type="text" id="taskinfo" placeholder="Task to do"/>
+            <button id="add" onclick="addition()">Add</button>
+        </div>
+        
+        <div id="tasklist"></div>
+    </div>
+
+    
+    <script>
+        let todoele=document.getElementById("taskinfo");
+        let tasklist=document.getElementById("tasklist");
+        function addition(){
+            if(todoele.value.length==0){
+                alert("enter task details");
+            }
+            else{
+                let todoele=document.getElementById("taskinfo").value;
+                let naveen=document.createElement("div");
+                naveen.innerHTML=`${todoele}</br>`;
+                document.getElementById("tasklist").appendChild(naveen);
+
+            }
+
+        }
+    </script>
+
+    
+</body>
+</html>

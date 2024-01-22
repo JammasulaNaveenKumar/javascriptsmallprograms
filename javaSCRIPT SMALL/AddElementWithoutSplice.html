@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function insertElement() {
+    let array = [1, 2, 3,4,5];
+
+    // index to add to
+    let index = 3;
+
+    // element that you want to add
+    let element = 8;
+  
+    for (let i = array.length; i > index; i--) {
+
+        //shift the elements that are greater than index
+        array[i] = array[i-1];
+    }
+
+    // insert element at given index
+    array[index] = element;
+
+    console.log(array);
+}
+
+insertElement();
+  </script>
+</body>
+</html>

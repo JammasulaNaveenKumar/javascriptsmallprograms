@@ -1,0 +1,42 @@
+Stop Watch
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initialscale=1.0" />
+<title>Stop Watch</title>
+</head>
+<body>
+<div id="showtime"> HH : MM : SS</div>
+<button onclick="StartTime()">Start</button>
+<button onclick="clearTime()">Stop</button>
+</body>
+<script>
+let startTime;
+let seconds = 0;
+let minutes = 0;
+let hours = 0;
+// Start method of stop watch
+function StartTime(str) {
+startTime = setInterval(function () {
+if (seconds == 60) {
+minutes += 1;
+seconds = 0;
+}
+if (minutes == 60) {
+hours += 1;
+minutes = 0;
+seconds = 0;
+}
+seconds += 1;
+document.getElementById("showtime").innerHTML =
+`${hours} :  minutes + " : " + seconds`;
+}, 1000);
+}
+// Stop method of stop watch
+function clearTime() {
+clearInterval(startTime);
+}
+</script>
+</html>

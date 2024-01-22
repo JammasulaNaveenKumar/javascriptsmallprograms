@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="enter number" id="num"/>
+    <button onclick="range()">enter</button>
+    <span id="msg"></span>
+    <script>
+        function range(){
+            let a= parseInt(document.getElementById("num").value);
+            for (i=40;i<=100;i++){
+                if(a==i){
+                    console.log("hai")
+                    document.getElementById("msg").innerHTML="enter number is exist between 40 to 100"
+                    break;
+                }
+                else{
+                    document.getElementById("msg").innerHTML="enter number is not exist between 40 to 100"
+                }
+
+            }
+        }
+    </script>
+</body>
+</html>

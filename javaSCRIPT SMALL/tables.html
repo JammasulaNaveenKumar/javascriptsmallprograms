@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Elements with JS</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <input type="text" name="tablestart" id="tablestart" />
+    <input type="text" name="tableend" id="tableend" />
+    <button onclick="addTodo();">ADD TODO</button>
+    <div id="showTodoList"></div>
+  </body>
+  <script>
+    let delTable = [];
+    let startTable = "";
+    let endTable = "";
+    function addTodo() {
+      startTable = document.getElementById("tablestart").value;
+      endTable = document.getElementById("tableend").value;
+
+      document.getElementById("tablestart").value = "";
+      document.getElementById("tableend").value = "";
+
+      render(startTable, endTable);
+    }
+
+    function delTodo(event) {
+      let deltableId = event.target.id;
+      delTable.push(parseInt(deltableId));
+
+      render(startTable, endTable);
+    }
+    function render(tableStart = 5, tableEnd = 10) {
+      //reset
+      //console.log(tableStart, tableEnd);
+      document.getElementById("showTodoList").innerHTML = "";
+      //todoList.forEach((todo) => {
+
+      for (let i = parseInt(tableStart); i <= parseInt(tableEnd); i++) {
+        console.log(delTable, delTable.indexOf(i));
+
+        if (delTable.indexOf(i) >= 0) continue;
+
+        let divElement = document.createElement("div");
+        divElement.style = "display:inline-block";
+        for (let table = 1; table <= 10; table++) {
+          divElement.innerHTML += `<div>${i}x${table}=${table * i}</div>`;
+        }
+        let delbutton = document.createElement("button");
+        delbutton.innerText = "Delete";
+        delbutton.id = i;
+        delbutton.style = "margin-left:20px; background-color:red";
+        delbutton.onclick = delTodo;
+        divElement.appendChild(delbutton);
+        document.getElementById("showTodoList").appendChild(divElement);
+      }
+    }
+  </script>
+</html>

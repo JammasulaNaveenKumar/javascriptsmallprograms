@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function person(){
+            this.name="naveen";
+            this.age=26;
+            this.add=function(a,b){
+                  this.c=a+b;
+                  f=this.c
+                return this.c;
+                console.log(this.c)
+            };
+            this.mul=function(a,f){
+               let b=a*f;
+                return b
+
+            }
+            
+
+
+        }
+       let p=new person();
+       console.log(p.name)
+       //console.log(p.age)
+       //console.log(p.add(2,5))
+
+       //console.log(p.mul(2,f))
+
+    
+
+    </script>
+    
+</body>
+</html>
